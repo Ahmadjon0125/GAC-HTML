@@ -28,13 +28,13 @@
                     </a>
                     <nav class="navbar">
                         <ul>
-                            <li><a href="">О компании</a></li>
-                            <li><a href="">Продукты</a></li>
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">Для клиентов</a></li>
-                            <li><a href="">Медиа</a></li>
-                            <li><a href="">Партнеры</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="/about.html">О компании</a></li>
+                            <li><a href="/product.html">Продукты</a></li>
+                            <li><a href="/tecnology.html">Услуги</a></li>
+                            <li><a href="/client.html">Для клиентов</a></li>
+                            <li><a href="/media.html">Медиа</a></li>
+                            <li><a href="/partner.html">Партнеры</a></li>
+                            <li><a href="/contact.html">Контакты</a></li>
                         </ul>
                     </nav>
 
@@ -77,13 +77,13 @@
             <div class="mobile-nav" id="mobileNav">
                 <div class="mobile-nav-content">
                     <ul class="navList">
-                        <li><a href="">О компании</a></li>
-                        <li><a href="">Продукты</a></li>
-                        <li><a href="">Услуги</a></li>
-                        <li><a href="">Для клиентов</a></li>
-                        <li><a href="">Медиа</a></li>
-                        <li><a href="">Партнеры</a></li>
-                        <li><a href="">Контакты</a></li>
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/product.html">Продукты</a></li>
+                        <li><a href="/tecnology.html">Услуги</a></li>
+                        <li><a href="/client.html">Для клиентов</a></li>
+                        <li><a href="/media.html">Медиа</a></li>
+                        <li><a href="/partner.html">Партнеры</a></li>
+                        <li><a href="/contact.html">Контакты</a></li>
                     </ul>
                 </div>
             </div>
@@ -104,17 +104,20 @@
                                         rgba(0, 0, 0, 0.4),
                                         rgba(0, 0, 0, 0) 40%
                                     ),
-                                    url(./img/heroBg.jpg), rgba(0, 0, 0, 0.08);
-
-                                background-size: cover;
-                                background-repeat: no-repeat;
-                                background-position: center;
+                                    /* Shaffoflikni rasmdan oldin qo'shimcha qatlam sifatida qo'shish */
+                                        linear-gradient(
+                                            rgba(0, 0, 0, 0.08),
+                                            rgba(0, 0, 0, 0.08)
+                                        ),
+                                    /* Oxirgi qatlam: Rasm + Rasm ostidagi Asosiy Rang */
+                                        url('./img/heroBg.jpg') center/cover
+                                        no-repeat;
                             "
                         >
                             <div class="swiper_content">
                                 <h2>GS8</h2>
                                 <p>7-местный флагманский кроссовер</p>
-                                <a href="">Подробнее</a>
+                                <a href="" class="btnMain">Подробнее</a>
                             </div>
                         </div>
                         <div class="swiper-slide">Slide 2</div>
@@ -154,17 +157,17 @@
                                     <div>
                                         <img src="./img/car1.png" alt="" />
                                         <h3>GS8</h3>
-                                        <a href="">Подробнее</a>
+                                        <a href="" class="btnMain">Подробнее</a>
                                     </div>
                                     <div>
                                         <img src="./img/car2.png" alt="" />
                                         <h3>EMPOW</h3>
-                                        <a href="">Подробнее</a>
+                                        <a href="" class="btnMain">Подробнее</a>
                                     </div>
                                     <div>
                                         <img src="./img/car3.png" alt="" />
                                         <h3>EMKOO</h3>
-                                        <a href="">Подробнее</a>
+                                        <a href="" class="btnMain">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +177,7 @@
                                     <div>
                                         <img src="./img/car1.png" alt="" />
                                         <h3>GS8</h3>
-                                        <a href="">Подробнее</a>
+                                        <a href="" class="btnMain">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +187,7 @@
                                     <div>
                                         <img src="./img/car2.png" alt="" />
                                         <h3>EMPOW</h3>
-                                        <a href="">Подробнее</a>
+                                        <a href="" class="btnMain">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +197,7 @@
                                     <div>
                                         <img src="./img/car3.png" alt="" />
                                         <h3>EMKOO</h3>
-                                        <a href="">Подробнее</a>
+                                        <a href="" class="btnMain">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +215,7 @@
                                 ipsam voluptatem, quia voluptas sit, aspernatur
                                 aut odit aut fugit.
                             </p>
-                            <a href="">Подробнее</a>
+                            <a href="" class="btnMain">Подробнее</a>
                         </div>
                         <div>
                             <img src="./img/car4.jpg" alt="" />
@@ -249,8 +252,108 @@
                                 vel illum, qui dolorem eum fugiat, quo
                                 voluptas nulla pariatur.
                             </p>
-                            <a href="">Подробнее</a>
+                            <a href="" class="btnMain">Подробнее</a>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <!-- last news section  -->
+            <section class="lastNews">
+                <div class="container">
+                    <div class="lastNews_inner">
+                        <div class="lastNews_top">
+                            <h2>Последние новости и обновления</h2>
+                            <a href="/news.html" class="btnMain">
+                                <span>
+                                    Все новости
+                                    <svg
+                                        width="8"
+                                        height="14"
+                                        viewBox="0 0 8 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.750001 12.75L6.7751 6.75L0.75 0.75"
+                                            stroke="white"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="lastNews_cards">
+                            <a href="/newsIn.html">
+                                <img src="./img/car1.jpg" alt="" />
+                                <p>20.11.2025</p>
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                </h3>
+                            </a>
+                            <a href="/newsIn.html">
+                                <img src="./img/car2.jpg" alt="" />
+                                <p>20.11.2025</p>
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                </h3>
+                            </a>
+                            <a href="/newsIn.html">
+                                <img src="./img/car3.jpg" alt="" />
+                                <p>20.11.2025</p>
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- all last section -->
+            <section
+                class="formSection"
+                style="
+                    background: 
+                        linear-gradient(
+                            270deg,
+                            rgba(25, 25, 25, 0),
+                            rgba(25, 25, 25, 0.9) 57%,
+                            rgba(25, 25, 25, 0.9) 100%
+                        ),url('./img/formBg.jpg');
+                "
+            >
+                <div class="container">
+                    <div class="formSection_in">
+                        <h2>Свяжитесь с нами</h2>
+                        <form action="" class="formSection_form">
+                            <input type="text" placeholder="ФИО" />
+                            <input type="tel" placeholder="Номер телефона" />
+                            <textarea placeholder="Комментарий"></textarea>
+                            <button class="btnMain" type="submit">
+                                <span
+                                    >Отправить
+                                    <svg
+                                        width="8"
+                                        height="14"
+                                        viewBox="0 0 8 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.750001 12.75L6.7751 6.75L0.75 0.75"
+                                            stroke="white"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>

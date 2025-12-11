@@ -26,6 +26,24 @@ a {
     padding: 0 20px;
 }
 
+.btnMain {
+    color: rgba(255, 255, 255, 1);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 18px 38px;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.btnMain:hover {
+    background-color: white;
+    color: #191919;
+}
+
 /* -----------------   HEADER SECTION   -------------- */
 
 .headerStyle {
@@ -108,7 +126,7 @@ a {
     padding: 5px 0;
     margin: 0;
     position: absolute;
-    top: 90%;
+    top: 130%;
     right: 0;
     background-color: #fff;
     border-top: none;
@@ -185,7 +203,7 @@ a {
     margin: 0;
     padding: 0;
     position: relative;
-    height: 90vh;
+    height: 100vh;
 }
 
 .swiper {
@@ -227,16 +245,6 @@ a {
     letter-spacing: 0%;
     text-align: center;
     margin-bottom: 23px;
-}
-
-.swiper_content a {
-    font-size: 12px;
-    font-weight: 600;
-    text-align: center;
-    border: 1px solid white;
-    display: inline-block;
-    color: #fff;
-    padding: 18px 38px;
 }
 
 /* ----------------- SWIPER NAVIGATSIYASINI JOYLASHTIRISH ----------------- */
@@ -381,17 +389,6 @@ a {
     margin-bottom: 35px;
 }
 
-.model-list div a {
-    color: rgba(255, 255, 255, 1);
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 15px;
-    letter-spacing: 0%;
-    text-align: center;
-    padding: 18px 38px;
-    border: 1px solid white;
-}
-
 .modelTab_bottom {
     display: flex;
     align-items: center;
@@ -416,17 +413,6 @@ a {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 41px;
-}
-
-.modelTab_bottom div a {
-    color: rgba(255, 255, 255, 1);
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 15px;
-    letter-spacing: 0%;
-    text-align: center;
-    padding: 18px 38px;
-    border: 1px solid white;
 }
 
 .modelTab_bottom div img {
@@ -468,19 +454,162 @@ a {
     margin-bottom: 41px;
 }
 
-.promotion_inner div a {
-    color: rgba(255, 255, 255, 1);
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 15px;
-    letter-spacing: 0%;
-    text-align: center;
-    padding: 18px 38px;
-    border: 1px solid white;
+/* ---------------------------------  last News section   --------------------------- */
+
+.lastNews {
+    background-color: #191919;
+    padding: 104px 0 114px 0;
 }
+
+.lastNews_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 43px;
+}
+
+.lastNews_top h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    max-width: 568px;
+}
+
+.lastNews_top a span svg {
+    margin-left: 9px;
+    transition: all 0.5s ease;
+}
+
+.lastNews_top a svg path {
+    transition: all 0.5s ease;
+}
+.lastNews_top a:hover svg path {
+    stroke: black;
+}
+
+.lastNews_top a span {
+    display: flex;
+    align-items: center;
+}
+
+.lastNews_cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.lastNews_cards a {
+    max-width: 420px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.lastNews_cards a:hover {
+    transform: scale(1.05);
+}
+
+.lastNews_cards a:hover h3 {
+    text-decoration: underline solid white;
+}
+
+.lastNews_cards a img {
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 23px;
+}
+
+.lastNews_cards a p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.lastNews_cards a h3 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+/* -------------------------   form section  end   --------------------- */
+
+.formSection {
+    padding: 103px 0 120px 0;
+}
+
+.formSection_in h2 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 42px;
+}
+
+.formSection_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    gap: 20px;
+}
+
+.formSection_form input,
+.formSection_form textarea {
+    padding: 13px 30px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: none;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.formSection_form input::placeholder,
+.formSection_form textarea::placeholder {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.formSection_form > button {
+    background-color: transparent;
+}
+
+.formSection_form button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.formSection_form button span svg path {
+    transition: all 0.5s ease;
+}
+
+.formSection_form button:hover span svg path {
+    stroke: #191919;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* --------------   BREAKPOINTS   ------------- */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 1300px) {
     .model-list div img {
@@ -536,14 +665,15 @@ a {
         height: 400px;
     }
 
-        .promotion_inner {
-    display: flex;
-    height: 600px;
-    align-items: center;
-    justify-content: flex-end;
+    .promotion_inner {
+        display: flex;
+        height: 600px;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
-}
-
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media (max-width: 992px) {
     .navbar {
         display: none;
@@ -651,9 +781,7 @@ a {
         margin-bottom: 20px;
     }
 
-    .model-list div a {
-        font-size: 12px;
-        font-weight: 600;
+    .btnMain {
         padding: 10px 28px;
     }
 
@@ -679,11 +807,23 @@ a {
         height: 350px;
     }
 
-    .modelTab_bottom div a {
-        padding: 10px 28px;
+    .lastNews {
+        padding: 85px 0;
     }
 
+    .lastNews_top h2 {
+        font-size: 40px;
+        line-height: 40px;
+        max-width: 468px;
+    }
 
+    .lastNews_cards a h3 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
 }
 
 @media (max-width: 768px) {
@@ -700,11 +840,6 @@ a {
     .swiper_content p {
         font-size: 16px;
         margin-bottom: 18px;
-    }
-
-    .swiper_content a {
-        font-size: 12px;
-        padding: 10px 28px;
     }
 
     /* ----------------------------- */
@@ -735,11 +870,6 @@ a {
         margin-bottom: 20px;
     }
 
-    .model-list div a {
-        font-size: 12px;
-        padding: 10px 28px;
-    }
-
     .modelTab_bottom {
         justify-content: center;
         align-items: center;
@@ -767,10 +897,7 @@ a {
         height: 380px;
     }
 
-    .modelTab_bottom div a {
-        padding: 10px 28px;
-    }
-            /* -------------------------------------------------------------- */
+    /* -------------------------------------------------------------- */
     .promotion_inner {
         height: max-content;
         padding: 30px 0;
@@ -797,10 +924,47 @@ a {
         text-align: center;
     }
 
-    .promotion_inner div a {
-        padding: 10px 28px;
+    .lastNews {
+        padding: 45px 0;
     }
+
+    .lastNews_top h2 {
+        font-size: 30px;
+        line-height: 30px;
+        max-width: 408px;
+    }
+
+    .lastNews_top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .lastNews_cards a h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .formSection_in h2 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 22px;
 }
+    .formSection {
+    padding: 50px 0;
+}
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media (max-width: 576px) {
     .hero {
@@ -816,11 +980,6 @@ a {
     .swiper_content p {
         font-size: 16px;
         margin-bottom: 15px;
-    }
-
-    .swiper_content a {
-        font-size: 12px;
-        padding: 10px 28px;
     }
 
     /* --------------------------- */
@@ -848,10 +1007,40 @@ a {
         height: 70%;
     }
 
-      .promotion_inner {
+    .promotion_inner {
         height: max-content;
         padding: 20px 0;
         justify-content: center;
         text-align: center;
+    }
+
+    .lastNews_top h2 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .lastNews_cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .lastNews_cards a {
+        max-width: 100%;
+    }
+
+    .lastNews_cards a img {
+        margin-bottom: 10px;
+    }
+
+    .lastNews_cards a p {
+        margin-bottom: 3px;
+    }
+
+    .lastNews_cards a h3 {
+        font-size: 18px;
     }
 }
