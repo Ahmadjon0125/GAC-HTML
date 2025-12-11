@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- font Montserrat  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <!-- main css  -->
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>GAC</title>
+    </head>
+    <body>
+        <header id="mainHeader" class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="/">
+                        <img src="./img/logo.svg" alt="" class="logo" />
+                    </a>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Продукты</a></li>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Для клиентов</a></li>
+                            <li><a href="">Медиа</a></li>
+                            <li><a href="">Партнеры</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="lang_wrapper">
+                        <div class="lang">
+                            <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M8.75 16.75C9.80058 16.75 10.8409 16.5431 11.8115 16.141C12.7821 15.739 13.664 15.1497 14.4069 14.4069C15.1497 13.664 15.739 12.7821 16.141 11.8115C16.5431 10.8409 16.75 9.80058 16.75 8.75C16.75 7.69943 16.5431 6.65914 16.141 5.68853C15.739 4.71793 15.1497 3.83601 14.4069 3.09315C13.664 2.35028 12.7821 1.761 11.8115 1.35896C10.8409 0.956926 9.80058 0.75 8.75 0.75M8.75 16.75C7.69943 16.75 6.65914 16.5431 5.68853 16.141C4.71793 15.739 3.83601 15.1497 3.09315 14.4069C2.35028 13.664 1.761 12.7821 1.35896 11.8115C0.956926 10.8409 0.75 9.80058 0.75 8.75C0.75 7.69943 0.956926 6.65914 1.35896 5.68853C1.761 4.71793 2.35028 3.83601 3.09315 3.09315C3.83601 2.35028 4.71793 1.761 5.68853 1.35896C6.65914 0.956926 7.69943 0.75 8.75 0.75M8.75 16.75C11.2042 16.75 12.2531 12.1607 12.2531 8.75C12.2531 5.33933 11.2042 0.75 8.75 0.75M8.75 16.75C6.29578 16.75 5.24689 12.1607 5.24689 8.75C5.24689 5.33933 6.29578 0.75 8.75 0.75M1.19444 6.08333H16.3056M1.19444 11.4167H16.3056"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <p>RU</p>
+                            <ul class="lang__dropdown">
+                                <li><a>UZ</a></li>
+                                <li><a>EN</a></li>
+                                <li><a>RU</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Burger Button -->
+                    <div class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <ul class="navList">
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Продукты</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Для клиентов</a></li>
+                        <li><a href="">Медиа</a></li>
+                        <li><a href="">Партнеры</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="overlay" id="overlay"></div>
+        </header>
+        <main>
+            <!-- hero section  -->
+            <section class="hero">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div
+                            class="swiper-slide"
+                            style="
+                                background: linear-gradient(
+                                        180deg,
+                                        rgba(0, 0, 0, 0.4),
+                                        rgba(0, 0, 0, 0) 40%
+                                    ),
+                                    url(./img/heroBg.jpg), rgba(0, 0, 0, 0.08);
+
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                            "
+                        >
+                            <div class="swiper_content">
+                                <h2>GS8</h2>
+                                <p>7-местный флагманский кроссовер</p>
+                                <a href="">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-controls">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Модельный ряд section  -->
+            <section class="modelTab">
+                <div class="container">
+                    <div class="modelTab_inner">
+                        <h2>Модельный ряд</h2>
+
+                        <div class="tabs-nav">
+                            <a class="tab-button active" data-tab="all">
+                                BCE
+                            </a>
+                            <span></span>
+                            <a class="tab-button" data-tab="suv">SUV</a>
+                            <span></span>
+                            <a class="tab-button" data-tab="sedan"> SEDAN </a>
+                            <span></span>
+                            <a class="tab-button" data-tab="mpv">MPV</a>
+                        </div>
+
+                        <div class="tabs-content-wrapper">
+                            <div
+                                class="tab-content active"
+                                data-tab-content="all"
+                            >
+                                <div class="model-list">
+                                    <div>
+                                        <img src="./img/car1.png" alt="" />
+                                        <h3>GS8</h3>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                    <div>
+                                        <img src="./img/car2.png" alt="" />
+                                        <h3>EMPOW</h3>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                    <div>
+                                        <img src="./img/car3.png" alt="" />
+                                        <h3>EMKOO</h3>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" data-tab-content="suv">
+                                <div class="model-list">
+                                    <div>
+                                        <img src="./img/car1.png" alt="" />
+                                        <h3>GS8</h3>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" data-tab-content="sedan">
+                                <div class="model-list">
+                                    <div>
+                                        <img src="./img/car2.png" alt="" />
+                                        <h3>EMPOW</h3>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" data-tab-content="mpv">
+                                <div class="model-list">
+                                    <div>
+                                        <img src="./img/car3.png" alt="" />
+                                        <h3>EMKOO</h3>
+                                        <a href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelTab_bottom">
+                        <div>
+                            <h3>Ключевые технологические преимущества</h3>
+                            <p>
+                                Sed ut perspiciatis, unde omnis iste natus error
+                                sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam eaque ipsa, quae
+                                ab illo inventore veritatis et quasi architecto
+                                beatae vitae dicta sunt, explicabo. Nemo enim
+                                ipsam voluptatem, quia voluptas sit, aspernatur
+                                aut odit aut fugit.
+                            </p>
+                            <a href="">Подробнее</a>
+                        </div>
+                        <div>
+                            <img src="./img/car4.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aksiya section  -->
+            <section
+                class="promotion"
+                style="
+                    background: linear-gradient(
+                            270deg,
+                            rgba(25, 25, 25, 1),
+                            rgba(25, 25, 25, 0) 100%
+                        ),
+                        url('./img/promotionBg.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                "
+            >
+                <div class="container">
+                    <div class="promotion_inner">
+                        <div>
+                            <h2>Акции и специальные предложения</h2>
+                            <p>
+                                Ut enim ad minima veniam, quis nostrum
+                                exercitationem ullam corporis
+                                suscipit laboriosam, nisi ut aliquid ex ea
+                                commodi consequatur? Quis autem vel eum iure
+                                reprehenderit, qui in ea voluptate velit
+                                esse, quam nihil molestiae consequatur,
+                                vel illum, qui dolorem eum fugiat, quo
+                                voluptas nulla pariatur.
+                            </p>
+                            <a href="">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+        <!-- swiper js  -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- main js  -->
+        <script src="./js/main.js"></script>
+    </body>
+</html>
