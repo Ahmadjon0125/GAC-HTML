@@ -104,13 +104,11 @@
                                         rgba(0, 0, 0, 0.4),
                                         rgba(0, 0, 0, 0) 40%
                                     ),
-                                    /* Shaffoflikni rasmdan oldin qo'shimcha qatlam sifatida qo'shish */
-                                        linear-gradient(
-                                            rgba(0, 0, 0, 0.08),
-                                            rgba(0, 0, 0, 0.08)
-                                        ),
-                                    /* Oxirgi qatlam: Rasm + Rasm ostidagi Asosiy Rang */
-                                        url('./img/heroBg.jpg') center/cover
+                                    linear-gradient(
+                                        rgba(0, 0, 0, 0.08),
+                                        rgba(0, 0, 0, 0.08)
+                                    ),
+                                    url('./img/heroBg.jpg') center/cover
                                         no-repeat;
                             "
                         >
@@ -313,17 +311,17 @@
                     </div>
                 </div>
             </section>
-            <!-- all last section -->
+            <!-- CONST all last section -->
             <section
                 class="formSection"
                 style="
-                    background: 
-                        linear-gradient(
+                    background: linear-gradient(
                             270deg,
                             rgba(25, 25, 25, 0),
                             rgba(25, 25, 25, 0.9) 57%,
                             rgba(25, 25, 25, 0.9) 100%
-                        ),url('./img/formBg.jpg');
+                        ),
+                        url('./img/formBg.jpg') center / cover no-repeat;
                 "
             >
                 <div class="container">
@@ -332,7 +330,10 @@
                         <form action="" class="formSection_form">
                             <input type="text" placeholder="ФИО" />
                             <input type="tel" placeholder="Номер телефона" />
-                            <textarea placeholder="Комментарий"></textarea>
+                            <textarea
+                                placeholder="Комментарий"
+                                rows="5"
+                            ></textarea>
                             <button class="btnMain" type="submit">
                                 <span
                                     >Отправить
@@ -358,7 +359,24 @@
                 </div>
             </section>
         </main>
-        <footer></footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_in">
+                    <div class="footer_top">
+                        <div>
+                            <h2>Карта сайта</h2>
+                            <div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="footer_bottom"></div>
+                </div>
+            </div>
+        </footer>
         <!-- swiper js  -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- main js  -->

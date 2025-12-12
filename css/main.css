@@ -603,6 +603,111 @@ a {
 .formSection_form button:hover span svg path {
     stroke: #191919;
 }
+
+/* ------------ ----------------   about section    -------------------------------- */
+
+.about_hero {
+    height: 90vh;
+}
+
+.about_hero_in {
+    padding-top: 175px;
+}
+
+.about_hero_in h2 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.about_hero_in h3 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about_hero_in p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.about2 {
+    padding: 104px 0 120px 0;
+}
+
+.about2 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.about2 p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 41px;
+}
+
+.about2 div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about2 img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.about3 {
+    padding: 154px 0;
+}
+
+.about3_in {
+    max-width: 600px;
+}
+
+.about3_in h2 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.about3_in p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -824,8 +929,67 @@ a {
         letter-spacing: 0%;
         text-align: left;
     }
+
+    .about2 {
+        padding: 86px 0;
+    }
+
+    .about2 h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .about2 p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 21px;
+    }
+
+    .about2 div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about2 img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .about3 {
+        padding: 100px 0;
+    }
+
+    .about3_in {
+        max-width: 100%;
+    }
+
+    .about3_in h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .about3_in p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: center;
+    }
 }
 
+/* ---------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     .hero {
         height: 80vh;
@@ -950,17 +1114,101 @@ a {
     }
 
     .formSection_in h2 {
-    color: rgba(255, 255, 255, 1);
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 52px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 22px;
-}
+        color: rgba(255, 255, 255, 1);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 22px;
+    }
     .formSection {
-    padding: 50px 0;
-}
+        padding: 50px 0;
+    }
+
+    .about_hero {
+        height: max-content;
+        padding-bottom: 20px;
+    }
+    .about_hero_in {
+        padding-top: 105px;
+    }
+
+    .about_hero_in h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 4px;
+    }
+
+    .about_hero_in h3 {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .about_hero_in p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    .about2 {
+        padding: 56px 0;
+    }
+
+    .about2 h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .about2 p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 21px;
+    }
+
+    .about2 div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about2 img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .about3 {
+        padding: 50px 0;
+    }
+
+    .about3_in h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .about3_in p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -1043,4 +1291,86 @@ a {
     .lastNews_cards a h3 {
         font-size: 18px;
     }
+
+    .about2 {
+        padding: 30px 0;
+    }
+
+    .about2 div {
+        gap: 10px;
+    }
+
+    .about2 h2 {
+        font-size: 24px;
+    }
+
+    .about3 {
+        padding: 35px 0;
+    }
+
+    .about3_in h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    .about3_in p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+}
+
+.overlap-section {
+    /* Konteynerga balandlik berish muhim, chunki ichidagi elementlar absolut joylashadi */
+    height: 600px;
+    padding: 50px 0;
+}
+
+.overlap-inner-relative {
+    position: relative; /* Ichidagi absolut elementlar shu konteynerga nisbatan joylashadi */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%; /* Balandlikni .overlap-section dan olish */
+}
+
+/* --- 1-Qism: Rasm bloki --- */
+.image-block {
+    position: absolute;
+    top: 50%; /* Vertikal markazlash uchun 50% tepadan surish */
+    left: 0;
+
+    /* Rasmni vertikal markazga surish */
+    transform: translateY(-50%);
+
+    width: 65%; /* Rasmning kengligi (taxminan 65%) */
+    z-index: 5;
+}
+.image-block img {
+    width: 100%;
+    display: block;
+}
+
+/* --- 2-Qism: Matn bloki --- */
+.text-block {
+    position: absolute;
+    top: 50%; /* Vertikal markazlash uchun 50% tepadan surish */
+    right: 0; /* O'ng tomonga joylash */
+
+    /* Matnni vertikal markazga surish */
+    transform: translateY(-50%);
+
+    width: 55%; /* Matn blokining kengligi (rasmga overlap tushishi uchun) */
+    background-color: #191919;
+    color: white;
+    padding: 50px 40px;
+    z-index: 10; /* Rasm ustida turishi uchun */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Matn stilini saqlab qolamiz */
+.text-block h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }

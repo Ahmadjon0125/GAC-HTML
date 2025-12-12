@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- font Montserrat  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <!-- main css  -->
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>GAC</title>
+    </head>
+    <body>
+        <header id="mainHeader" class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="/">
+                        <img src="./img/logo.svg" alt="" class="logo" />
+                    </a>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="/about.html">О компании</a></li>
+                            <li><a href="/product.html">Продукты</a></li>
+                            <li><a href="/tecnology.html">Услуги</a></li>
+                            <li><a href="/client.html">Для клиентов</a></li>
+                            <li><a href="/media.html">Медиа</a></li>
+                            <li><a href="/partner.html">Партнеры</a></li>
+                            <li><a href="/contact.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="lang_wrapper">
+                        <div class="lang">
+                            <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M8.75 16.75C9.80058 16.75 10.8409 16.5431 11.8115 16.141C12.7821 15.739 13.664 15.1497 14.4069 14.4069C15.1497 13.664 15.739 12.7821 16.141 11.8115C16.5431 10.8409 16.75 9.80058 16.75 8.75C16.75 7.69943 16.5431 6.65914 16.141 5.68853C15.739 4.71793 15.1497 3.83601 14.4069 3.09315C13.664 2.35028 12.7821 1.761 11.8115 1.35896C10.8409 0.956926 9.80058 0.75 8.75 0.75M8.75 16.75C7.69943 16.75 6.65914 16.5431 5.68853 16.141C4.71793 15.739 3.83601 15.1497 3.09315 14.4069C2.35028 13.664 1.761 12.7821 1.35896 11.8115C0.956926 10.8409 0.75 9.80058 0.75 8.75C0.75 7.69943 0.956926 6.65914 1.35896 5.68853C1.761 4.71793 2.35028 3.83601 3.09315 3.09315C3.83601 2.35028 4.71793 1.761 5.68853 1.35896C6.65914 0.956926 7.69943 0.75 8.75 0.75M8.75 16.75C11.2042 16.75 12.2531 12.1607 12.2531 8.75C12.2531 5.33933 11.2042 0.75 8.75 0.75M8.75 16.75C6.29578 16.75 5.24689 12.1607 5.24689 8.75C5.24689 5.33933 6.29578 0.75 8.75 0.75M1.19444 6.08333H16.3056M1.19444 11.4167H16.3056"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <p>RU</p>
+                            <ul class="lang__dropdown">
+                                <li><a>UZ</a></li>
+                                <li><a>EN</a></li>
+                                <li><a>RU</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Burger Button -->
+                    <div class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <ul class="navList">
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/product.html">Продукты</a></li>
+                        <li><a href="/tecnology.html">Услуги</a></li>
+                        <li><a href="/client.html">Для клиентов</a></li>
+                        <li><a href="/media.html">Медиа</a></li>
+                        <li><a href="/partner.html">Партнеры</a></li>
+                        <li><a href="/contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="overlay" id="overlay"></div>
+        </header>
+        <main>
+            <!-- hero section  -->
+            <section
+                class="about_hero"
+                style="
+                    background: linear-gradient(
+                            180deg,
+                            rgba(0, 0, 0, 0.4),
+                            rgba(0, 0, 0, 0) 40%
+                        ),
+                        linear-gradient(
+                            rgba(0, 0, 0, 0.08),
+                            rgba(0, 0, 0, 0.08)
+                        ),
+                        url('./img/aboutBg.jpg') center/cover no-repeat;
+                "
+            >
+                <div class="container">
+                    <div class="about_hero_in">
+                        <h2>О нас</h2>
+                        <h3>Немного о нашей компании</h3>
+                        <p>
+                            Sed ut perspiciatis, unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam eaque ipsa, quae ab illo inventore
+                            veritatis et quasi architecto beatae vitae dicta
+                            sunt, explicabo. Nemo enim ipsam voluptatem, quia
+                            voluptas sit, aspernatur aut odit aut fugit, sed
+                            quia consequuntur magni dolores eos, qui ratione
+                            voluptatem sequi nesciunt, neque porro quisquam est,
+                            qui dolorem ipsum, quia dolor sit, amet,
+                            consectetur, adipisci velit, sed quia non
+                            numquam eius modi tempora incidunt, ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                            minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea
+                            commodi consequatur? Quis autem vel eum iure
+                            reprehenderit.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2-section -->
+            <section>
+                <div class="container">
+                    <div class="about2">
+                        <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+                        <p>
+                            Sed ut perspiciatis, unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam eaque ipsa, quae ab illo inventore
+                            veritatis et quasi architecto beatae vitae dicta
+                            sunt, explicabo. Nemo enim ipsam voluptatem, quia
+                            voluptas sit, aspernatur aut odit aut fugit, sed
+                            quia consequuntur magni dolores eos, qui ratione
+                            voluptatem sequi nesciunt, neque porro quisquam est,
+                            qui dolorem ipsum, quia dolor sit, amet,
+                            consectetur, adipisci velit, sed quia non
+                            numquam eius modi tempora incidunt, ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                            minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea
+                            commodi consequatur? Quis autem vel eum iure
+                            reprehenderit, qui in ea voluptate velit esse, quam
+                            nihil molestiae consequatur, vel illum,
+                            qui dolorem eum fugiat, quo voluptas nulla pariatur?
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus, qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti, quos dolores et quas
+                            molestias excepturi sint, obcaecati cupiditate non
+                            provident, similique sunt in culpa, qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio. Nam libero tempore, cum soluta nobis est
+                            eligendi optio, cumque nihil impedit, quo minus id,
+                            quod maxime placeat, facere possimus, omnis voluptas
+                            assumenda est, omnis dolor repellendus. Temporibus
+                            autem quibusdam et aut officiis debitis aut rerum
+                            necessitatibus saepe eveniet, ut et voluptates
+                            repudiandae sint et molestiae non recusandae. Itaque
+                            earum rerum hic tenetur a sapiente delectus, ut aut
+                            reiciendis voluptatibus maiores alias consequatur
+                            aut perferendis doloribus asperiores repellat.
+                        </p>
+                        <div>
+                            <img src="./img/car1.jpg" alt="" />
+                            <img src="./img/car2.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 3-section -->
+            <section
+                class="about3"
+                style="
+                    background: linear-gradient(
+                            270deg,
+                            rgba(25, 25, 25, 0),
+                            rgba(25, 25, 25, 1),
+                            rgba(25, 25, 25, 1) 100%
+                        ),
+                        url('img/aboutBg3.jpg') center / cover no-repeat;
+                "
+            >
+                <div class="container">
+                    <div class="about3_in">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Sed ut perspiciatis, unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam eaque ipsa, quae ab illo inventore
+                            veritatis et quasi architecto beatae vitae dicta
+                            sunt, explicabo. Nemo enim ipsam voluptatem, quia
+                            voluptas sit, aspernatur aut odit aut fugit, sed
+                            quia consequuntur magni dolores eos, qui ratione
+                            voluptatem sequi nesciunt, neque porro quisquam est,
+                            qui dolorem ipsum, quia dolor sit, amet,
+                            consectetur, adipisci velit, sed quia non
+                            numquam eius modi tempora incidunt, ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                            minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea
+                            commodi consequatur.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- 4-section -->
+  
+
+            <!-- CONST all last section -->
+            <section
+                class="formSection"
+                style="
+                    background: linear-gradient(
+                            270deg,
+                            rgba(25, 25, 25, 0),
+                            rgba(25, 25, 25, 0.9) 57%,
+                            rgba(25, 25, 25, 0.9) 100%
+                        ),
+                        url('./img/formBg.jpg') center / cover no-repeat;
+                "
+            >
+                <div class="container">
+                    <div class="formSection_in">
+                        <h2>Свяжитесь с нами</h2>
+                        <form action="" class="formSection_form">
+                            <input type="text" placeholder="ФИО" />
+                            <input type="tel" placeholder="Номер телефона" />
+                            <textarea
+                                placeholder="Комментарий"
+                                rows="5"
+                            ></textarea>
+                            <button class="btnMain" type="submit">
+                                <span
+                                    >Отправить
+                                    <svg
+                                        width="8"
+                                        height="14"
+                                        viewBox="0 0 8 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.750001 12.75L6.7751 6.75L0.75 0.75"
+                                            stroke="white"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_in">
+                    <div class="footer_top">
+                        <div>
+                            <h2>Карта сайта</h2>
+                            <div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="footer_bottom"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- swiper js  -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- main js  -->
+        <script src="./js/main.js"></script>
+    </body>
+</html>
