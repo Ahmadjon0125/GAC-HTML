@@ -7,12 +7,10 @@ function updateHeader() {
         header.classList.remove("headerStyle");
     }
 }
-
-// Sahifa scroll bo‘lganda ishlaydi
 window.addEventListener("scroll", updateHeader);
-
-// Sahifa to‘liq yuklanganda ham tekshiramiz
 window.addEventListener("load", updateHeader);
+
+// language uchun
 
 document.addEventListener("DOMContentLoaded", function () {
     const langWrapper = document.querySelector(".lang_wrapper");
@@ -119,5 +117,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+
+// tecnology fancybox
+
+Fancybox.bind("[data-fancybox]", {
+    Carousel: {
+        Video: {
+            autoplay: false,
+        },
+    },
+});
+
+// swiper2
+var swiper = new Swiper(".mySwiper2", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
 
 });
