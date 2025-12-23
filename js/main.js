@@ -144,3 +144,44 @@ var swiper = new Swiper(".mySwiper2", {
     },
 
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".lastNews_cards > a");
+    const showMore = document.querySelector(".showMore");
+
+    const step = 6;
+    let visible = 6;
+
+    // 1️⃣ hammasini yashiramiz
+    cards.forEach(card => card.hidden = true);
+
+    // 2️⃣ birinchi 6 tasini ko‘rsatamiz
+    for (let i = 0; i < visible && i < cards.length; i++) {
+        cards[i].hidden = false;
+    }
+
+    // 3️⃣ Show more bosilganda
+    showMore.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        for (let i = visible; i < visible + step && i < cards.length; i++) {
+            cards[i].hidden = false;
+        }
+
+        visible += step;
+
+        // 4️⃣ hammasi ochilsa — tugma yo‘qolsin
+        if (visible >= cards.length) {
+            showMore.style.display = "none";
+        }
+    });
+});
+
+
+ 
+
+
+
+
