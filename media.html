@@ -123,7 +123,7 @@
 
             <section class="modelTab">
                 <div class="container">
-                    <div class="modelTab_inner mediaTab ">
+                    <div class="modelTab_inner mediaTab">
                         <div class="tabs-nav">
                             <a class="tab-button active" data-tab="photo">
                                 Фото
@@ -132,65 +132,193 @@
                             <a class="tab-button" data-tab="video">Видео</a>
                         </div>
 
-<!-- <div class="tabs-content-wrapper">
-    <div class="tab-content active" data-tab-content="photo">
-        <div class="gallery-wrapper">
-            <div id="main-slider" class="splide main-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="img/car1.jpg" alt="Katta rasm 1" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car2.jpg" alt="Katta rasm 2" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car3.jpg" alt="Katta rasm 3" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car4.jpg" alt="Katta rasm 4" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car1.jpg" alt="Katta rasm 5" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car2.jpg" alt="Katta rasm 6" />
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<style>
+  /* ----------------------------------------------------- */
+  /* Vertikal joylashuv uchun Container'larni moslash */
+  /* ----------------------------------------------------- */
 
-            <div id="thumbnail-slider" class="splide thumbnail-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="img/car1.jpg" alt="Kichik rasm 1" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car2.jpg" alt="Kichik rasm 2" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car3.jpg" alt="Kichik rasm 3" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car4.jpg" alt="Kichik rasm 4" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car1.jpg" alt="Kichik rasm 5" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="img/car2.jpg" alt="Kichik rasm 6" />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  /* Asosiy konteynerni Flex qilib sozlash */
+  .photoList {
+    position: relative;
+    /* Balandlikni sezilarli darajada oshirdik, rasmga moslash uchun */
+    height: 662px; 
+    display: flex; /* Elementlarni yonma-yon joylash uchun */
+    gap: 20px; /* Asosiy rasm va thumblar orasidagi bo'shliq */
+  }
+
+  /* ----------------------------------------------------- */
+  /* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
+  /* ----------------------------------------------------- */
+
+  .mySwiper20 {
+    max-width: 1130px;
+    width: 100%; /* O'ng tomonda thumblar uchun joy qoldirish (taxminan 90px + gap) */  
+    height: 100%; /* photoList balandligiga moslashadi */
+    margin: 0;
+  }
+  
+  .mySwiper20 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mySwiper20 .swiper-slide img {
+    width: 100%;
+    height: 100% !important;
+  }
+  /* Navigatsiya tugmalari stillarini asosiy rasmga o'xshatib o'zgartirish */
+  .mySwiper20 .next,
+  .mySwiper20 .prev {
+   
+    z-index: 10;
+  }
+  
+  /* ----------------------------------------------------- */
+  /* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
+  /* ----------------------------------------------------- */
+  
+  .mySwiper10 {
+    width: 170px; /* Thumblar kengligi (rasmdagi kabi tor) */
+    height: 100%; /* photoList balandligiga moslashadi */
+    box-sizing: border-box;
+    padding: 0; 
+  }
+
+  .mySwiper10 .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    top: 0;
+  }
+
+  /* Har bir Thumbnail Slayd uchun stil */
+  .mySwiper10 .swiper-slide {
+    width: 100% !important; 
+    max-height: 114px !important;
+    height: 100% !important;
+    margin-bottom: 5px; /* Vertikal bo'shliq */
+    opacity: 1; /* Opacity 0.4 ni bu yerda olib tashladik, pastda rang o'chirish ishlatiladi */
+    cursor: pointer;
+    background: none;
+
+  }
+
+  /* Rasm elementining o'zi */
+   .mySwiper10 .swiper-slide img {
+    display: block;
+    width: 100%;
+    max-height: 114px;
+    height: 114px !important;
+    object-fit: cover;
+  }
+
+  /* 👇 Rasmdagi effekt: Aktiv bo'lmagan rasmlarning rangini o'chirish/qoraytirish */
+  .mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
+   opacity: 1;
+    
+  }
+
+  /* Aktiv (tanlangan) Thumbnail stili */
+  .mySwiper10 .swiper-slide-thumb-active img {
+    opacity: 0.3;
+  }
+
+</style>
+                        <div class="tabs-content-wrapper">
+                            <div class="tab-content" data-tab-content="photo">
+                                <div class="model-list photoList">
+             
+                                      <!-- Swiper -->
+
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper20">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide20">
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      </div>
+      <div class="swiper-slide slide20">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide slide20">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide slide20">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+      <div class="swiper-slide slide20">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
+
     </div>
-</div> -->
+    <div class="swiper-controls">
+                        <div class="swiper-button-prev prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next next"></div>
+                    </div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper10">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide10">
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      </div>
+      <div class="swiper-slide slide10">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide slide10">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide slide10">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+      <div class="swiper-slide slide10">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
 
-                        <div class="tab-content" data-tab-content="video">
-                            <div class="model-list">
-                                <div>video</div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper10", {
+      loop: true,
+      spaceBetween: 5, // Vertikal bo'shliq
+      slidesPerView: 4, // Bir vaqtning o'zida 4 ta rasm ko'rinadi
+      direction: 'vertical', // Vertikal rejimni yoqish
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    
+    var swiper2 = new Swiper(".mySwiper20", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: "next",
+        prevEl: "prev",
+      },
+      // Nuqtali navigatsiyani qo'shamiz (rasmga moslash uchun)
+      pagination: {
+        el: '.swiper-pagination', 
+        clickable: true,
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" data-tab-content="video">
+                                <div class="model-list">
+                                    <div>video</div>
+                                </div>
                             </div>
                         </div>
                     </div>
