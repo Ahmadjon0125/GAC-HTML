@@ -351,6 +351,7 @@ a {
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
     cursor: default;
+    text-transform: uppercase;
 }
 
 .modelTab_inner .tabs-nav span {
@@ -1143,7 +1144,7 @@ a {
 
 /* --------------- */
 .tecno6 {
-    position: relative;
+    /* position: relative; */
     height: 100%;
     padding-top: 104px;
     padding-bottom: 120px;
@@ -1487,13 +1488,216 @@ a {
 }
 
 .newsIn p:nth-of-type(2) {
-color: var(--main-black);
-font-size: 18px;
-font-weight: 500;
-line-height: 30px;
-letter-spacing: 0%;
-text-align: left;
+    color: var(--main-black);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Splide.js ni ishlatish uchun kutubxona CSS-ni ulaganingizga ishonch hosil qiling! */
+/* Masalan: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> */
+
+.gallery-wrapper {
+    display: flex;
+}
+
+.main-slider {
+    flex-grow: 1; /* Asosiy slider katta qismni egallaydi */
+    margin-right: 20px;
+    height: 100%;
+    max-width: 1130px;
+}
+
+.thumbnail-slider {
+    width: 170px; /* Thumbnail bloki kengligi, gorizontal surish uchun joy */
+    /* Ko'rsatilgan rasmga ko'ra balandlik (ixtiyoriy) */
+
+    /* Rasmlar soni 5 tadan oshib ketsa scroll/drag bo'lishi uchun kerak */
+}
+
+/* Rasmlar stilini moslashtirish */
+.main-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-slider img {
+    width: 100%;
+    max-height: 114px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    display: block;
+}
+
+/* Active (tanlangan) thumbnail stilini belgilash */
+.thumbnail-slider .is-active img {
+    opacity: 0.3;
+}
+
+/* Tugmalarni yashirish (agar kerak bo'lmasa) */
+.thumbnail-slider .splide__arrows {
+    display: none;
+}
+
+/* jghfn,hj.kl/;'' */
+
+/* Default paginatsiya joyini yashirish */
+#main-slider > .splide__pagination {
+    display: none !important;
+    height: 662px !important;
+}
+
+/* Custom controls wrapper */
+#main-slider {
+    position: relative;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/* Arrows */
+.slider-controls .splide__arrow {
+    position: static !important;
+    transform: none !important;
+    background-color: transparent;
+    width: 16px;
+    height: 30px;
+}
+
+/* Pagination */
+.slider-controls .splide__pagination {
+    position: static !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    gap: 10px;
+}
+
+.slider-controls .splide__pagination__page {
+    margin: 0 !important;
+}
+
+.splide__arrow svg {
+    fill: white !important;
+    width: 20px;
+    height: 100%;
+}
+
+/* Yoki butunlay oq fon va qora strelka uchun */
+.slider-controls .splide__arrow {
+    width: 30px;
+    height: 30px;
+}
+
+.main-slider .splide__track .splide__list .splide__slide {
+    height: 662px !important;
+    object-fit: cover;
+}
+
+.mediaTab {
+    margin-bottom: 25px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#myCarousel {
+    /* --f-arrow-pos: 20px;
+    --f-arrow-bg: transparent;
+    --f-arrow-hover-bg: transparent;
+    --f-arrow-color: white;
+    --f-arrow-width: 30px;
+    --f-arrow-height: 60px;
+    --f-arrow-svg-width: 30px;
+    --f-arrow-svg-height: 60px;
+    --f-arrow-svg-stroke-width: 2px;
+    --f-arrow-border-radius: 0%; */
+
+    height: 662px;
+}
+
+#myCarousel .f-carousel__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myCarousel img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ------------------------------------------------------------------------------------------ */
+
+.partner {
+    padding: 180px 0 120px 0;
+}
+
+.partner p {
+    color: var(--main-black);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 51px;
+}
+
+.partner ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.partner ul li {
+    background-color: #e8e8e8;
+    padding: 35px 55px;
+}
+
+.partner ul li img {
+    width: 110px;
+    height: 80px;
+}
+
+.partner a {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgba(25, 25, 25, 0.3);
+    padding: 17px;
+    color: var(--main-black);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -1568,6 +1772,58 @@ text-align: left;
         height: 480px;
         flex-shrink: 0;
     }
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+.partner {
+    padding: 100px 0;
+}
+
+.partner p {
+    color: var(--main-black);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 51px;
+}
+
+.partner ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.partner ul li {
+    background-color: #e8e8e8;
+    padding: 30px;
+}
+
+.partner ul li img {
+    width: 80px;
+    height: 60px;
+}
+
+.partner a {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgba(25, 25, 25, 0.3);
+    padding: 17px;
+    color: var(--main-black);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -2054,45 +2310,220 @@ text-align: left;
     }
 
     .newsIn {
-    padding: 80px;
+        padding: 80px;
+    }
+
+    .newsIn p:first-child {
+        color: var(--main-black);
+        opacity: 0.6;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+
+    .newsIn h2 {
+        color: var(--main-black);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 33px;
+    }
+
+    .newsIn img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        margin-bottom: 33px;
+    }
+
+    .newsIn p:nth-of-type(2) {
+        color: var(--main-black);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Splide.js ni ishlatish uchun kutubxona CSS-ni ulaganingizga ishonch hosil qiling! */
+    /* Masalan: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> */
+
+    .gallery-wrapper {
+        display: flex;
+    }
+
+    .main-slider {
+        flex-grow: 1; /* Asosiy slider katta qismni egallaydi */
+        margin-right: 20px;
+        /* max-height: 500px; */
+        height: 100%;
+        max-width: 1130px;
+    }
+
+    .thumbnail-slider {
+        width: 170px; /* Thumbnail bloki kengligi, gorizontal surish uchun joy */
+        /* Ko'rsatilgan rasmga ko'ra balandlik (ixtiyoriy) */
+
+        /* Rasmlar soni 5 tadan oshib ketsa scroll/drag bo'lishi uchun kerak */
+    }
+
+    /* Rasmlar stilini moslashtirish */
+    .main-slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumbnail-slider img {
+        width: 100%;
+        max-height: 80px;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 0.3s;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* Active (tanlangan) thumbnail stilini belgilash */
+    .thumbnail-slider .is-active img {
+        opacity: 0.3;
+    }
+
+    /* Tugmalarni yashirish (agar kerak bo'lmasa) */
+    .thumbnail-slider .splide__arrows {
+        display: none;
+    }
+
+    /* jghfn,hj.kl/;'' */
+
+    /* Default paginatsiya joyini yashirish */
+    #main-slider > .splide__pagination {
+        display: none !important;
+        height: 662px !important;
+    }
+
+    /* Custom controls wrapper */
+    #main-slider {
+        position: relative;
+    }
+
+    .slider-controls {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    /* Arrows */
+    .slider-controls .splide__arrow {
+        position: static !important;
+        transform: none !important;
+        background-color: transparent;
+        width: 16px;
+        height: 30px;
+    }
+
+    /* Pagination */
+    .slider-controls .splide__pagination {
+        position: static !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        gap: 10px;
+    }
+
+    .slider-controls .splide__pagination__page {
+        margin: 0 !important;
+    }
+
+    .splide__arrow svg {
+        fill: white !important;
+        width: 20px;
+        height: 100%;
+    }
+
+    /* Yoki butunlay oq fon va qora strelka uchun */
+    .slider-controls .splide__arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main-slider .splide__track .splide__list .splide__slide {
+        height: 662px !important;
+        object-fit: cover;
+    }
+
+    .mediaTab {
+        margin-bottom: 25px;
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+
+.partner {
+    padding: 80px 0;
 }
 
-.newsIn p:first-child {
+.partner p {
     color: var(--main-black);
-    opacity: 0.6;
+    font-style: Medium;
     font-size: 18px;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 18px;
-}
-
-.newsIn h2 {
-    color: var(--main-black);
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 40px;
+    line-height: 30px;
     letter-spacing: 0%;
     text-align: center;
-    margin-bottom: 33px;
+    margin-bottom: 51px;
 }
 
-.newsIn img {
+.partner ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.partner ul li {
+    background-color: #e8e8e8;
+    padding: 25px;
+}
+
+.partner ul li img {
+    width: 70px;
+    height: 50px;
+}
+
+.partner a {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    margin-bottom: 33px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgba(25, 25, 25, 0.3);
+    padding: 17px;
+    color: var(--main-black);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
 }
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.newsIn p:nth-of-type(2) {
-color: var(--main-black);
-font-size: 18px;
-font-weight: 500;
-line-height: 25px;
-letter-spacing: 0%;
-text-align: center;
-}
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -2722,41 +3153,41 @@ text-align: center;
         margin-bottom: 30px;
     }
 
-     .newsIn {
-    padding: 50px;
-}
+    .newsIn {
+        padding: 50px;
+    }
 
-.newsIn p:first-child {
-    opacity: 0.6;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 18px;
-}
+    .newsIn p:first-child {
+        opacity: 0.6;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 18px;
+    }
 
-.newsIn h2 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 30px;
-    margin-bottom: 25px;
-}
+    .newsIn h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
 
-.newsIn img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    margin-bottom: 30px;
-}
+    .newsIn img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
 
-.newsIn p:nth-of-type(2) {
-font-size: 18px;
-font-weight: 500;
-line-height: 25px;
-letter-spacing: 0%;
-text-align: center;
-}
+    .newsIn p:nth-of-type(2) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 660px) {
@@ -3245,38 +3676,89 @@ text-align: center;
         margin-bottom: 25px;
     }
 
-         .newsIn {
-    padding: 20px 0;
+    .newsIn {
+        padding: 20px 0;
+    }
+
+    .newsIn p:first-child {
+        opacity: 0.6;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .newsIn h2 {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .newsIn img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .newsIn p:nth-of-type(2) {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+        /* ------------------------------------------------------------------------------------------ */
+
+.partner {
+    padding: 40px 0;
 }
 
-.newsIn p:first-child {
-    opacity: 0.6;
+.partner p {
+    color: var(--main-black);
+    font-style: Medium;
     font-size: 16px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 25px;
     letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 31px;
 }
 
-.newsIn h2 {
-    font-size: 24px;
-    line-height: 24px;
-    margin-bottom: 20px;
+.partner ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-.newsIn img {
+.partner ul li {
+    background-color: #e8e8e8;
+    padding: 20px;
+}
+
+.partner ul li img {
+    width: 60px;
+    height: 40px;
+}
+
+.partner a {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgba(25, 25, 25, 0.3);
+    padding: 12px;
+    color: var(--main-black);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
 }
-
-.newsIn p:nth-of-type(2) {
-font-size: 16px;
-font-weight: 500;
-line-height: 25px;
-letter-spacing: 0%;
-text-align: center;
-}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
