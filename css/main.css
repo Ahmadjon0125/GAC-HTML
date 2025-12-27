@@ -1923,6 +1923,17 @@ a {
     margin-bottom: 80px;
 }
 
+.main-video div:first-child {
+    position: absolute; /* absolute */
+    top: 0; /* inset-0 */
+    right: 0; /* inset-0 */
+    bottom: 0; /* inset-0 */
+    left: 0; /* inset-0 */
+
+    background-size: cover; /* bg-cover */
+    background-position: center;
+}
+
 .video-block a img {
     width: 100%;
     height: 700px;
@@ -2035,6 +2046,99 @@ a {
     text-decoration: underline;
 }
 
+.about8 {
+    background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+    padding: 120px 0;
+}
+
+.about8In {
+    height: 677px;
+    position: relative;
+}
+
+.about8In div:first-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 900px;
+    height: 597px;
+    width: 100%;
+}
+.about8In div:first-child img {
+    width: 100%;
+    height: inherit;
+}
+.about8In .about8div {
+    background-color: var(--main-black);
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 800px;
+    padding: 64px 70px 71px 70px;
+}
+
+.about8In .about8div h2 {
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.about8In .about8div p {
+    color: rgba(255, 255, 255, 1);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.prod8 {
+    background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+    padding: 200px 0 120px 0;
+}
+
+.prod8In {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.prod8In img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.prod8In div:nth-child(2) {
+    padding: 93px 60px;
+    background-color: var(--main-black);
+}
+
+.prod8In div:nth-child(2) h2 {
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.prod8In div:nth-child(2) p {
+    color: rgba(255, 255, 255, 1);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -2165,7 +2269,101 @@ a {
         letter-spacing: 0%;
         text-align: center;
     }
+
+    .about8 {
+        background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+        padding: 120px 0;
+    }
+
+    .about8In {
+        height: 600px;
+        position: relative;
+    }
+
+    .about8In div:first-child {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 800px;
+        height: 500px;
+        width: 100%;
+    }
+    .about8In div:first-child img {
+        width: 100%;
+        height: inherit;
+    }
+    .about8In .about8div {
+        background-color: var(--main-black);
+        color: white;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 700px;
+        padding: 40px;
+    }
+
+    .about8In .about8div h2 {
+        color: rgba(255, 255, 255, 1);
+        font-style: Bold;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 28px;
+    }
+
+    .about8In .about8div p {
+        color: rgba(255, 255, 255, 1);
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
     /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    .prod8 {
+    background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+    padding: 120px 0;
+}
+
+.prod8In {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.prod8In img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.prod8In div:nth-child(2) {
+    padding: 40px;
+    background-color: var(--main-black);
+}
+
+.prod8In div:nth-child(2) h2 {
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.prod8In div:nth-child(2) p {
+    color: rgba(255, 255, 255, 1);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -3098,6 +3296,96 @@ a {
         text-align: left;
         margin-bottom: 28px;
     }
+
+    .about8 {
+        background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+        padding: 40px 0;
+    }
+
+    .about8In {
+        height: 100%;
+        position: static;
+    }
+
+    .about8In div:first-child {
+        display: none;
+    }
+    .about8In div:first-child img {
+        display: none;
+    }
+    .about8In .about8div {
+        background-color: var(--main-black);
+        color: white;
+        position: static;
+        right: 0;
+        top: 0;
+        width: 100%;
+        padding: 40px;
+    }
+
+    .about8In .about8div h2 {
+        color: rgba(255, 255, 255, 1);
+        font-style: Bold;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .about8In .about8div p {
+        color: rgba(255, 255, 255, 1);
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+
+    .prod8 {
+    background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+    padding: 80px 0;
+}
+
+.prod8In {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.prod8In img {
+   max-width: 700px;
+    object-fit: cover;
+    max-height: 400px;
+}
+.prod8In div:nth-child(2) {
+    padding: 40px;
+    background-color: var(--main-black);
+}
+
+.prod8In div:nth-child(2) h2 {
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.prod8In div:nth-child(2) p {
+    color: rgba(255, 255, 255, 1);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -3854,6 +4142,76 @@ a {
     .map {
         height: 500px;
     }
+
+    .about8 {
+        background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+        padding: 30px 0;
+    }
+
+    .about8In .about8div {
+        padding: 20px;
+    }
+
+    .about8In .about8div h2 {
+        font-style: Bold;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about8In .about8div p {
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+      .prod8 {
+    background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+    padding: 60px 0;
+}
+
+.prod8In {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.prod8In img {
+   max-width: 700px;
+    object-fit: cover;
+    max-height: 400px;
+}
+.prod8In div:nth-child(2) {
+    padding: 30px;
+    background-color: var(--main-black);
+}
+
+.prod8In div:nth-child(2) h2 {
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.prod8In div:nth-child(2) p {
+    color: rgba(255, 255, 255, 1);
+    font-style: Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
 }
 
 @media (max-width: 660px) {
@@ -4178,9 +4536,9 @@ a {
     }
 
     .prodIn2 p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
-        line-height: 24px;
+        line-height: 22px;
         letter-spacing: 0%;
         text-align: center;
     }
@@ -4657,4 +5015,85 @@ a {
         width: 22px;
         height: 22px;
     }
+
+    .about8 {
+        background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+        padding: 20px 0;
+    }
+
+    .about8In .about8div {
+        padding: 15px;
+    }
+
+    .about8In .about8div h2 {
+        font-style: Bold;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about8In .about8div p {
+        font-style: Medium;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    .about2 p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: center;
+        margin-bottom: 21px;
+    }
+
+          .prod8 {
+    background: linear-gradient(to bottom, #e8e8e8 50%, #ffffff 50%);
+    padding: 30px 0;
+}
+
+.prod8In {
+   display: flex; 
+   flex-direction: column;/* Flexbox ga o'tish */
+    justify-content: center; /* Gorizontal markazlashtirish */
+     /* Vertikal markazlashtirish (agar balandlik belgilangan bo'lsa) */
+    width: 100%;
+}
+
+.prod8In img {
+    max-width: 500px; /* Rasm 500px dan oshmaydi */
+    width: 100%;
+   max-height: 300px; 
+   object-fit: cover;
+}
+.prod8In div:nth-child(2) {
+    padding: 20px;
+    background-color: var(--main-black);
+}
+
+.prod8In div:nth-child(2) h2 {
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 22x;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.prod8In div:nth-child(2) p {
+    color: rgba(255, 255, 255, 1);
+    font-style: Medium;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+}
 }
