@@ -83,81 +83,128 @@ var swiper = new Swiper(".mySwiper", {
 // home page uchun tab contentlar   -------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Kerakli elementlarni tanlab olish
+
+    /* =========================
+       TAB ELEMENTS
+    ========================= */
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
 
-    // 2. Har bir knopkaga 'click' hodisasini qo'shish
+    /* =========================
+       VIDEO ELEMENTS
+    ========================= */
+   const mainVideo = document.getElementById("mainVideo");
+const mainPoster = document.getElementById("mainPoster");
+const mainTitle = document.getElementById("mainTitle");
+
+const thumbs = document.querySelectorAll(".thumb");
+
+/* =========================
+   VIDEO SET FUNCTION
+========================= */
+function setMainVideo(thumb) {
+    if (!thumb) return;
+
+    const thumbIn = thumb.querySelector(".thumbIn");
+    if (!thumbIn) return;
+
+    // active class
+    thumbs.forEach((t) => t.classList.remove("active"));
+    thumb.classList.add("active");
+
+    // data-* ni thumbIn dan olish
+    mainVideo.href = thumbIn.dataset.video;
+    mainPoster.src = thumbIn.dataset.poster;
+    mainTitle.textContent = thumbIn.dataset.title;
+}
+
+/* =========================
+   THUMB CLICK (1 MARTA)
+========================= */
+thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+        setMainVideo(thumb);
+    });
+});
+
+/* =========================
+   DEFAULT VIDEO (ixtiyoriy)
+   page yuklanganda 1-chi
+========================= */
+const activeThumb = document.querySelector(".thumb.active");
+if (activeThumb) {
+    setMainVideo(activeThumb);
+} else if (thumbs.length) {
+    setMainVideo(thumbs[0]);
+}
+
+
+    /* =========================
+       TAB SWITCH
+    ========================= */
     tabButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            // Bosilgan knopkadan maqsadli tab nomini olish (data-tab="...")
-            const targetTab = button.getAttribute("data-tab");
+            const targetTab = button.dataset.tab;
 
-            // --- A) Barcha aktiv holatlarni olib tashlash (Knopkalar va Kontentdan) ---
-
-            // Barcha knopkalardan 'active' klassini olib tashlash
             tabButtons.forEach((btn) => btn.classList.remove("active"));
-
-            // Barcha kontentlardan 'active' klassini olib tashlash (yashirish)
             tabContents.forEach((content) =>
                 content.classList.remove("active")
             );
 
-            // --- B) Maqsadli elementlarni aktiv qilish ---
-
-            // Bosilgan knopkaga 'active' klassini qo'shish
             button.classList.add("active");
 
-            // Maqsadli kontentni topish va unga 'active' klassini qo'shish (ko'rsatish)
             const activeContent = document.querySelector(
                 `.tab-content[data-tab-content="${targetTab}"]`
             );
             if (activeContent) {
                 activeContent.classList.add("active");
             }
+
+            // 🔥 FAQAT VIDEO TAB OCHILGANDA DEFAULT VIDEO
+            if (targetTab === "video") {
+                const activeThumb = document.querySelector(".thumb.active");
+                if (!activeThumb && thumbs.length) {
+                    setMainVideo(thumbs[0]);
+                }
+            }
         });
     });
 
-
-
-
-  var swiper = new Swiper(".mySwiper10", {
+    /* =========================
+       PHOTO SWIPER
+    ========================= */
+    const swiperThumbs = new Swiper(".mySwiper10", {
         loop: false,
-        spaceBetween: 5, 
-        slidesPerView: 5, 
-        direction: "horizontal", 
+        spaceBetween: 5,
+        slidesPerView: 5,
         freeMode: true,
         watchSlidesProgress: true,
         breakpoints: {
-  
-        992: {
-            direction: "vertical", 
-            slidesPerView: 5,
-           
-        }
-    }
+            992: {
+                direction: "vertical",
+                slidesPerView: 5,
+            },
+        },
     });
 
-    var swiper2 = new Swiper(".mySwiper20", {
+    const swiperMain = new Swiper(".mySwiper20", {
         loop: true,
         spaceBetween: 10,
         navigation: {
             nextEl: ".next",
             prevEl: ".prev",
         },
-       
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
         thumbs: {
-            swiper: swiper,
+            swiper: swiperThumbs,
         },
     });
 
-
-
 });
+
 
 // tecnology fancybox
 
@@ -182,10 +229,6 @@ var swiper = new Swiper(".mySwiper2", {
         modifier: 1,
         slideShadows: true,
     },
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  
 });
 
 

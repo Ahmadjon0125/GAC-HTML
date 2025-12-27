@@ -1822,12 +1822,11 @@ a {
 /* Vertikal joylashuv uchun Container'larni moslash */
 /* ----------------------------------------------------- */
 
-
 .photoList {
     position: relative;
     height: 662px;
-    display: flex; 
-    gap: 20px; 
+    display: flex;
+    gap: 20px;
 }
 
 /* ----------------------------------------------------- */
@@ -1836,8 +1835,8 @@ a {
 
 .mySwiper20 {
     max-width: 1130px;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     margin: 0;
 }
 
@@ -1864,7 +1863,7 @@ a {
 /* ----------------------------------------------------- */
 
 .mySwiper10 {
-    width: 170px; 
+    width: 170px;
     height: 100%;
     box-sizing: border-box;
     padding: 0;
@@ -1879,18 +1878,16 @@ a {
     top: 0;
 }
 
-
 .mySwiper10 .swiper-slide {
     width: 100% !important;
     max-height: 114px !important;
     height: 100% !important;
-    margin-bottom: 23px !important; 
-    opacity: 1; 
+    margin-bottom: 23px !important;
+    opacity: 1;
     cursor: pointer;
     background: none;
     padding-top: 0;
 }
-
 
 .mySwiper10 .swiper-slide img {
     display: block;
@@ -1906,6 +1903,136 @@ a {
 
 .mySwiper10 .swiper-slide-thumb-active img {
     opacity: 0.3;
+}
+
+/* ------------++++++++++++++++++----------------- */
+/* * 💡 Active holati uchun zaruriy CSS qismi. 
+ * Endi barcha selectorlar toza va yangi klass nomlari bilan ishlaydi.
+ */
+
+.video-block {
+    max-width: 100%;
+    margin: auto;
+    color: #fff;
+}
+
+.main-video {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.video-block a img {
+    width: 100%;
+    height: 700px;
+    display: block;
+}
+
+.main-video .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%);
+}
+
+.play-btn.small {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.main-title {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    color: white;
+    font-style: Bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 64px;
+}
+
+/* thumbs */
+.video-thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.thumb .thumbIn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 420px;
+}
+
+/* overlay */
+.thumb .thumbIn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    z-index: 1;
+}
+
+/* ACTIVE bo‘lganda */
+.thumb.active .thumbIn::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* rasmlar overlay ostida qolmasin */
+.thumb .thumbIn img {
+    position: relative;
+    z-index: 0;
+}
+
+/* play button overlay ustida bo‘lsin */
+.thumb .thumbIn .play-btn {
+    position: absolute;
+    z-index: 2;
+}
+
+.thumbIn img:first-child {
+    width: 100%;
+    object-fit: cover;
+}
+
+.thumb.active .play-btn.small {
+    display: block;
+    height: 50px;
+}
+
+.thumb img {
+    width: 100%;
+    display: block;
+}
+
+.thumb-title {
+    margin-top: 19px;
+    color: rgba(255, 255, 255, 1);
+    font-style: Bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.thumb.active .thumb-title {
+    text-decoration: underline;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -1927,6 +2054,12 @@ a {
     .modelTab_bottom div img {
         width: 600px;
         height: 500px;
+    }
+
+    .model-list .video-block #mainPoster {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
     }
 }
 
@@ -2835,95 +2968,136 @@ a {
     }
 
     /* ----------------------------------------------------- */
-/* Vertikal joylashuv uchun Container'larni moslash */
-/* ----------------------------------------------------- */
+    /* Vertikal joylashuv uchun Container'larni moslash */
+    /* ----------------------------------------------------- */
 
+    .photoList {
+        position: relative;
+        height: 500px;
+        display: flex;
+        gap: 20px;
+    }
 
-.photoList {
-    position: relative;
-    height: 500px;
-    display: flex; 
-    gap: 20px; 
-}
+    /* ----------------------------------------------------- */
+    /* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
+    /* ----------------------------------------------------- */
 
-/* ----------------------------------------------------- */
-/* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
-/* ----------------------------------------------------- */
+    .mySwiper20 {
+        max-width: 1130px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
 
-.mySwiper20 {
-    max-width: 1130px;
-    width: 100%; 
-    height: 100%; 
-    margin: 0;
-}
+    .mySwiper20 .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
 
-.mySwiper20 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
+    .mySwiper20 .swiper-slide img {
+        width: 100%;
+        height: 100% !important;
+    }
 
-.mySwiper20 .swiper-slide img {
-    width: 100%;
-    height: 100% !important;
-}
+    .mySwiper20 .next,
+    .mySwiper20 .prev {
+        z-index: 10;
+    }
 
-.mySwiper20 .next,
-.mySwiper20 .prev {
-    z-index: 10;
-}
+    /* ----------------------------------------------------- */
+    /* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
+    /* ----------------------------------------------------- */
 
-/* ----------------------------------------------------- */
-/* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
-/* ----------------------------------------------------- */
+    .mySwiper10 {
+        height: 170px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
 
-.mySwiper10 {
-    height: 170px; 
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-}
+    .mySwiper10 .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        top: 0;
+    }
 
-.mySwiper10 .swiper-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    top: 0;
-}
+    .mySwiper10 .swiper-slide {
+        width: 170px !important;
+        max-height: 114px !important;
+        height: 100% !important;
+        margin-right: 23px !important;
+        opacity: 1;
+        cursor: pointer;
+        background: none;
+        padding-top: 0;
+    }
 
+    .mySwiper10 .swiper-slide img {
+        display: block;
+        width: 100%;
+        max-height: 114px;
+        height: 114px !important;
+        object-fit: cover;
+    }
 
-.mySwiper10 .swiper-slide {
-    width: 170px !important;
-    max-height: 114px !important;
-    height: 100% !important;
-    margin-right: 23px !important; 
-    opacity: 1; 
-    cursor: pointer;
-    background: none;
-    padding-top: 0;
-}
+    .mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
+        opacity: 1;
+    }
 
+    .mySwiper10 .swiper-slide-thumb-active img {
+        opacity: 0.3;
+    }
 
-.mySwiper10 .swiper-slide img {
-    display: block;
-    width: 100%;
-    max-height: 114px;
-    height: 114px !important;
-    object-fit: cover;
-}
+    .model-list .video-block #mainPoster {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+    }
 
-.mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
-    opacity: 1;
-}
+    .main-video {
+        margin-bottom: 50px;
+    }
 
-.mySwiper10 .swiper-slide-thumb-active img {
-    opacity: 0.3;
-}
+    .thumb-title {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 15px;
+    }
 
+    .thumb.active .play-btn.small {
+        display: block;
+        width: 26px;
+        height: 26px;
+    }
+
+    .main-video .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-title {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        color: white;
+        font-style: Bold;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 28px;
+    }
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -3766,95 +3940,92 @@ a {
         text-align: center;
     }
 
-        /* ----------------------------------------------------- */
-/* Vertikal joylashuv uchun Container'larni moslash */
-/* ----------------------------------------------------- */
+    /* ----------------------------------------------------- */
+    /* Vertikal joylashuv uchun Container'larni moslash */
+    /* ----------------------------------------------------- */
 
+    .photoList {
+        position: relative;
+        height: 350px;
+        display: flex;
+        gap: 20px;
+    }
 
-.photoList {
-    position: relative;
-    height: 350px;
-    display: flex; 
-    gap: 20px; 
-}
+    /* ----------------------------------------------------- */
+    /* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
+    /* ----------------------------------------------------- */
 
-/* ----------------------------------------------------- */
-/* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
-/* ----------------------------------------------------- */
+    .mySwiper20 {
+        max-width: 1130px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
 
-.mySwiper20 {
-    max-width: 1130px;
-    width: 100%; 
-    height: 100%; 
-    margin: 0;
-}
+    .mySwiper20 .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
 
-.mySwiper20 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
+    .mySwiper20 .swiper-slide img {
+        width: 100%;
+        height: 100% !important;
+    }
 
-.mySwiper20 .swiper-slide img {
-    width: 100%;
-    height: 100% !important;
-}
+    .mySwiper20 .next,
+    .mySwiper20 .prev {
+        z-index: 10;
+    }
 
-.mySwiper20 .next,
-.mySwiper20 .prev {
-    z-index: 10;
-}
+    /* ----------------------------------------------------- */
+    /* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
+    /* ----------------------------------------------------- */
 
-/* ----------------------------------------------------- */
-/* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
-/* ----------------------------------------------------- */
+    .mySwiper10 {
+        height: 170px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
 
-.mySwiper10 {
-    height: 170px; 
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-}
+    .mySwiper10 .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        top: 0;
+    }
 
-.mySwiper10 .swiper-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    top: 0;
-}
+    .mySwiper10 .swiper-slide {
+        width: 100px !important;
+        max-height: 80px !important;
+        height: 100% !important;
+        margin-right: 23px !important;
+        opacity: 1;
+        cursor: pointer;
+        background: none;
+        padding-top: 0;
+    }
 
+    .mySwiper10 .swiper-slide img {
+        display: block;
+        width: 100%;
+        max-height: 80px;
+        height: 114px !important;
+        object-fit: cover;
+    }
 
-.mySwiper10 .swiper-slide {
-    width: 100px !important;
-    max-height: 80px !important;
-    height: 100% !important;
-    margin-right: 23px !important; 
-    opacity: 1; 
-    cursor: pointer;
-    background: none;
-    padding-top: 0;
-}
+    .mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
+        opacity: 1;
+    }
 
-
-.mySwiper10 .swiper-slide img {
-    display: block;
-    width: 100%;
-    max-height: 80px;
-    height: 114px !important;
-    object-fit: cover;
-}
-
-.mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
-    opacity: 1;
-}
-
-.mySwiper10 .swiper-slide-thumb-active img {
-    opacity: 0.3;
-}
+    .mySwiper10 .swiper-slide-thumb-active img {
+        opacity: 0.3;
+    }
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -4434,5 +4605,56 @@ a {
 
     .map {
         height: 300px;
+    }
+
+    .model-list .video-block #mainPoster {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .main-video {
+        margin-bottom: 30px;
+    }
+
+    .thumb-title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 12px;
+    }
+
+    .video-thumbs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .main-video .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-title {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        color: white;
+        font-style: Bold;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .thumb.active .play-btn.small {
+        display: block;
+        width: 22px;
+        height: 22px;
     }
 }
