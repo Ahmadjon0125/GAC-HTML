@@ -117,6 +117,46 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+
+
+
+  var swiper = new Swiper(".mySwiper10", {
+        loop: false,
+        spaceBetween: 5, 
+        slidesPerView: 5, 
+        direction: "horizontal", 
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+  
+        992: {
+            direction: "vertical", 
+            slidesPerView: 5,
+           
+        }
+    }
+    });
+
+    var swiper2 = new Swiper(".mySwiper20", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".prev",
+        },
+       
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+
+
+
 });
 
 // tecnology fancybox
@@ -144,67 +184,8 @@ var swiper = new Swiper(".mySwiper2", {
     },
 });
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Asosiy Slider
-    var mainSlider = new Splide('#main-slider', {
-        type: 'fade',
-        heightRatio: 0.5,
-        pagination: true,
-        arrows: true,
-        cover: true,
-    });
-
-    // 2. Thumbnail Slider
-    var thumbnailSlider = new Splide('#thumbnail-slider', {
-        rewind: true,
-        arrows: true,
-        direction: 'ttb',
-        height: 662,
-        fixedWidth: 170,
-        fixedHeight: 114,
-        isNavigation: true,
-        gap: 23,
-        focus: 'center',
-        pagination: false,
-        cover: true,
-        dragMinThreshold: {
-            mouse: 4,
-            touch: 10,
-        },
-    });
-
-    // 3. Sinxronlashtirish
-    mainSlider.sync(thumbnailSlider);
-
-    // 4. Mount
-    mainSlider.mount();
-    thumbnailSlider.mount();
-
-    // 5. Mount bo'lgandan KEYIN custom controls yaratish
-    setTimeout(function() {
-        var sliderContainer = document.querySelector('#main-slider');
-        var arrows = sliderContainer.querySelectorAll('.splide__arrow');
-        var pagination = sliderContainer.querySelector('.splide__pagination');
-        
-        if (arrows.length > 0 && pagination) {
-            // Custom controls wrapper yaratish
-            var controlsWrapper = document.createElement('div');
-            controlsWrapper.className = 'slider-controls';
-            
-            // Elementlarni qo'shish
-            controlsWrapper.appendChild(arrows[0]); // prev
-            controlsWrapper.appendChild(pagination); // pagination
-            controlsWrapper.appendChild(arrows[1]); // next
-            
-            // Sliderga qo'shish
-            sliderContainer.appendChild(controlsWrapper);
-        }
-    }, 100);
+  
 });
 
 
-    

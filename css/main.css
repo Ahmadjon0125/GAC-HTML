@@ -1796,20 +1796,19 @@ a {
 .contact .contactDiv .contact_form .contactBtn {
     background-color: white;
     color: var(--main-black);
-    border: 1px solid rgba(25, 25, 25, 0.3);;
+    border: 1px solid rgba(25, 25, 25, 0.3);
 }
 
 .contact .contactDiv .contact_form .contactBtn:hover {
-   background: rgba(241, 241, 241, 1);
+    background: rgba(241, 241, 241, 1);
 }
 
-
-.contact .contactDiv .contact_form .contactBtn svg path{
+.contact .contactDiv .contact_form .contactBtn svg path {
     stroke: var(--main-black);
 }
 
 .contact .contactDiv .contact_form .contactBtn span {
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
@@ -1818,6 +1817,97 @@ a {
 .map {
     height: 800px;
 }
+
+/* ----------------------------------------------------- */
+/* Vertikal joylashuv uchun Container'larni moslash */
+/* ----------------------------------------------------- */
+
+
+.photoList {
+    position: relative;
+    height: 662px;
+    display: flex; 
+    gap: 20px; 
+}
+
+/* ----------------------------------------------------- */
+/* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
+/* ----------------------------------------------------- */
+
+.mySwiper20 {
+    max-width: 1130px;
+    width: 100%; 
+    height: 100%; 
+    margin: 0;
+}
+
+.mySwiper20 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mySwiper20 .swiper-slide img {
+    width: 100%;
+    height: 100% !important;
+}
+
+.mySwiper20 .next,
+.mySwiper20 .prev {
+    z-index: 10;
+}
+
+/* ----------------------------------------------------- */
+/* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
+/* ----------------------------------------------------- */
+
+.mySwiper10 {
+    width: 170px; 
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.mySwiper10 .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+
+.mySwiper10 .swiper-slide {
+    width: 100% !important;
+    max-height: 114px !important;
+    height: 100% !important;
+    margin-bottom: 23px !important; 
+    opacity: 1; 
+    cursor: pointer;
+    background: none;
+    padding-top: 0;
+}
+
+
+.mySwiper10 .swiper-slide img {
+    display: block;
+    width: 100%;
+    max-height: 114px;
+    height: 114px !important;
+    object-fit: cover;
+}
+
+.mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
+    opacity: 1;
+}
+
+.mySwiper10 .swiper-slide-thumb-active img {
+    opacity: 0.3;
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -2645,104 +2735,195 @@ a {
 
     /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.contact {
-    margin: 60px 0 ;
+    .contact {
+        margin: 60px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contact ul {
+        max-width: 440px;
+        list-style-type: none;
+    }
+
+    .contact ul li {
+        margin-bottom: 20px;
+    }
+
+    .contact ul li h3 {
+        color: rgba(25, 25, 25, 0.6);
+        font-style: Medium;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .contact ul li p {
+        color: var(--main-black);
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .contact ul li a {
+        color: var(--main-black);
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .contactDiv {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .contact .contactDiv h2 {
+        color: var(--main-black);
+        font-style: Bold;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 32px;
+    }
+
+    .contact .contactDiv .contact_form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .contactDiv .contact_form input,
+    .contact .contactDiv .contact_form textarea {
+        display: block;
+        width: 100%;
+        padding: 13px 30px;
+        outline: none;
+        border: none;
+        background: rgba(241, 241, 241, 1);
+        margin-top: 14px;
+    }
+
+    .contact .contactDiv .contact_form input::placeholder,
+    .contact .contactDiv .contact_form textarea::placeholder {
+        color: var(--main-black);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .contact .contactDiv .contact_form textarea {
+        margin-bottom: 30px;
+    }
+
+    /* --------------------------------------------------------------------- */
+
+    .map {
+        height: 600px;
+    }
+
+    /* ----------------------------------------------------- */
+/* Vertikal joylashuv uchun Container'larni moslash */
+/* ----------------------------------------------------- */
+
+
+.photoList {
+    position: relative;
+    height: 500px;
+    display: flex; 
+    gap: 20px; 
+}
+
+/* ----------------------------------------------------- */
+/* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
+/* ----------------------------------------------------- */
+
+.mySwiper20 {
+    max-width: 1130px;
+    width: 100%; 
+    height: 100%; 
+    margin: 0;
+}
+
+.mySwiper20 .swiper-slide {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-}
-.contact ul {
-    max-width: 440px;
-    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.contact ul li {
-    margin-bottom: 20px;
-}
-
-.contact ul li h3 {
-    color: rgba(25, 25, 25, 0.6);
-    font-style: Medium;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: 0%;
-    text-align: left;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.contact ul li p {
-    color: var(--main-black);
-    font-style: Medium;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-.contact ul li a {
-    color: var(--main-black);
-    font-style: Medium;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-.contactDiv {
-    max-width: 800px;
+.mySwiper20 .swiper-slide img {
     width: 100%;
+    height: 100% !important;
 }
 
-.contact .contactDiv h2 {
-    color: var(--main-black);
-    font-style: Bold;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 42px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 32px;
+.mySwiper20 .next,
+.mySwiper20 .prev {
+    z-index: 10;
 }
 
-.contact .contactDiv .contact_form {
+/* ----------------------------------------------------- */
+/* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
+/* ----------------------------------------------------- */
+
+.mySwiper10 {
+    height: 170px; 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.mySwiper10 .swiper-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    top: 0;
 }
 
-.contact .contactDiv .contact_form input,
-.contact .contactDiv .contact_form textarea {
+
+.mySwiper10 .swiper-slide {
+    width: 170px !important;
+    max-height: 114px !important;
+    height: 100% !important;
+    margin-right: 23px !important; 
+    opacity: 1; 
+    cursor: pointer;
+    background: none;
+    padding-top: 0;
+}
+
+
+.mySwiper10 .swiper-slide img {
     display: block;
     width: 100%;
-    padding: 13px 30px;
-    outline: none;
-    border: none;
-    background: rgba(241, 241, 241, 1);
-    margin-top: 14px;
+    max-height: 114px;
+    height: 114px !important;
+    object-fit: cover;
 }
 
-.contact .contactDiv .contact_form input::placeholder,
-.contact .contactDiv .contact_form textarea::placeholder {
-    color: var(--main-black);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
+.mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
+    opacity: 1;
 }
 
-.contact .contactDiv .contact_form textarea {
-    margin-bottom: 30px;
+.mySwiper10 .swiper-slide-thumb-active img {
+    opacity: 0.3;
 }
 
-/* --------------------------------------------------------------------- */
-
-.map {
-    height: 600px;
-}
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -3408,101 +3589,97 @@ a {
         text-align: center;
     }
 
-        /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.contact {
-    margin: 60px 0 ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:15px;
-}
-.contact ul {
-    max-width: 100%;
-   width: 100%;
-    list-style-type: none;
-}
+    .contact {
+        margin: 60px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .contact ul {
+        max-width: 100%;
+        width: 100%;
+        list-style-type: none;
+    }
 
-.contact ul li {
-    margin-bottom: 15px;
-}
+    .contact ul li {
+        margin-bottom: 15px;
+    }
 
-.contact ul li h3 {
-    color: rgba(25, 25, 25, 0.6);
-    font-style: Medium;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0%;
-    text-align: left;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
+    .contact ul li h3 {
+        color: rgba(25, 25, 25, 0.6);
+        font-style: Medium;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
-.contact ul li p {
-    color: var(--main-black);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: left;
-}
+    .contact ul li p {
+        color: var(--main-black);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
 
-.contact ul li a {
-    color: var(--main-black);
-    font-style: Medium;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: left;
-}
+    .contact ul li a {
+        color: var(--main-black);
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
 
+    .contact .contactDiv h2 {
+        color: var(--main-black);
+        font-style: Bold;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 22px;
+    }
 
+    .contact .contactDiv .contact_form input,
+    .contact .contactDiv .contact_form textarea {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        outline: none;
+        border: none;
+        background: rgba(241, 241, 241, 1);
+        margin-top: 14px;
+    }
 
-.contact .contactDiv h2 {
-    color: var(--main-black);
-    font-style: Bold;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 32px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 22px;
-}
+    .contact .contactDiv .contact_form input::placeholder,
+    .contact .contactDiv .contact_form textarea::placeholder {
+        color: var(--main-black);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
 
+    .contact .contactDiv .contact_form textarea {
+        margin-bottom: 30px;
+    }
 
+    /* --------------------------------------------------------------------- */
 
-.contact .contactDiv .contact_form input,
-.contact .contactDiv .contact_form textarea {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    outline: none;
-    border: none;
-    background: rgba(241, 241, 241, 1);
-    margin-top: 14px;
-}
-
-.contact .contactDiv .contact_form input::placeholder,
-.contact .contactDiv .contact_form textarea::placeholder {
-    color: var(--main-black);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-.contact .contactDiv .contact_form textarea {
-    margin-bottom: 30px;
-}
-
-/* --------------------------------------------------------------------- */
-
-.map {
-    height: 500px;
-}
+    .map {
+        height: 500px;
+    }
 }
 
 @media (max-width: 660px) {
@@ -3588,6 +3765,96 @@ a {
         line-height: 20px;
         text-align: center;
     }
+
+        /* ----------------------------------------------------- */
+/* Vertikal joylashuv uchun Container'larni moslash */
+/* ----------------------------------------------------- */
+
+
+.photoList {
+    position: relative;
+    height: 350px;
+    display: flex; 
+    gap: 20px; 
+}
+
+/* ----------------------------------------------------- */
+/* MY SWIPER 20 - Asosiy Rasm Slayderi (Chapda) */
+/* ----------------------------------------------------- */
+
+.mySwiper20 {
+    max-width: 1130px;
+    width: 100%; 
+    height: 100%; 
+    margin: 0;
+}
+
+.mySwiper20 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mySwiper20 .swiper-slide img {
+    width: 100%;
+    height: 100% !important;
+}
+
+.mySwiper20 .next,
+.mySwiper20 .prev {
+    z-index: 10;
+}
+
+/* ----------------------------------------------------- */
+/* MY SWIPER 10 - Vertikal Navigatsiya Thumblari (O'ngda) */
+/* ----------------------------------------------------- */
+
+.mySwiper10 {
+    height: 170px; 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.mySwiper10 .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+
+.mySwiper10 .swiper-slide {
+    width: 100px !important;
+    max-height: 80px !important;
+    height: 100% !important;
+    margin-right: 23px !important; 
+    opacity: 1; 
+    cursor: pointer;
+    background: none;
+    padding-top: 0;
+}
+
+
+.mySwiper10 .swiper-slide img {
+    display: block;
+    width: 100%;
+    max-height: 80px;
+    height: 114px !important;
+    object-fit: cover;
+}
+
+.mySwiper10 .swiper-slide:not(.swiper-slide-thumb-active) img {
+    opacity: 1;
+}
+
+.mySwiper10 .swiper-slide-thumb-active img {
+    opacity: 0.3;
+}
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -4077,102 +4344,95 @@ a {
     }
     /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+    /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+    .contact {
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .contact ul {
+        max-width: 100%;
+        width: 100%;
+        list-style-type: none;
+    }
 
-        /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    .contact ul li {
+        margin-bottom: 15px;
+    }
 
-.contact {
-    margin: 40px 0 ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:15px;
+    .contact ul li h3 {
+        color: rgba(25, 25, 25, 0.6);
+        font-style: Medium;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+
+    .contact ul li p {
+        color: var(--main-black);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .contact ul li a {
+        color: var(--main-black);
+        font-style: Medium;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .contact .contactDiv h2 {
+        color: var(--main-black);
+        font-style: Bold;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .contact .contactDiv .contact_form input,
+    .contact .contactDiv .contact_form textarea {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        outline: none;
+        border: none;
+        background: rgba(241, 241, 241, 1);
+        margin-top: 14px;
+    }
+
+    .contact .contactDiv .contact_form input::placeholder,
+    .contact .contactDiv .contact_form textarea::placeholder {
+        color: var(--main-black);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .contact .contactDiv .contact_form textarea {
+        margin-bottom: 30px;
+    }
+
+    /* --------------------------------------------------------------------- */
+
+    .map {
+        height: 300px;
+    }
 }
-.contact ul {
-    max-width: 100%;
-   width: 100%;
-    list-style-type: none;
-}
-
-.contact ul li {
-    margin-bottom: 15px;
-}
-
-.contact ul li h3 {
-    color: rgba(25, 25, 25, 0.6);
-    font-style: Medium;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0%;
-    text-align: left;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-}
-
-.contact ul li p {
-    color: var(--main-black);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-.contact ul li a {
-    color: var(--main-black);
-    font-style: Medium;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-
-
-.contact .contactDiv h2 {
-    color: var(--main-black);
-    font-style: Bold;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-
-
-.contact .contactDiv .contact_form input,
-.contact .contactDiv .contact_form textarea {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    outline: none;
-    border: none;
-    background: rgba(241, 241, 241, 1);
-    margin-top: 14px;
-}
-
-.contact .contactDiv .contact_form input::placeholder,
-.contact .contactDiv .contact_form textarea::placeholder {
-    color: var(--main-black);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-.contact .contactDiv .contact_form textarea {
-    margin-bottom: 30px;
-}
-
-/* --------------------------------------------------------------------- */
-
-.map {
-    height: 300px;
-}
-}
-
