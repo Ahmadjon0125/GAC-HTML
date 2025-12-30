@@ -352,6 +352,7 @@ a {
     border-bottom: 2px solid transparent;
     cursor: default;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .modelTab_inner .tabs-nav span {
@@ -1449,6 +1450,14 @@ a {
     display: inline-block;
     padding: 18px 35px;
     margin-top: 54px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.showMore:hover {
+    background-color: white;
+    color: var(--main-black);
+
 }
 
 .is-hidden {
@@ -1651,7 +1660,7 @@ a {
 /* ------------------------------------------------------------------------------------------ */
 
 .partner {
-    padding: 180px 0 120px 0;
+    padding:100px 0;
 }
 
 .partner p {
@@ -1712,7 +1721,7 @@ a {
 }
 
 .contact ul li {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .contact ul li h3 {
@@ -1760,7 +1769,7 @@ a {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: left;
-    margin-bottom: 42px;
+    margin-bottom: 22px;
 }
 
 .contact .contactDiv .contact_form {
@@ -1772,7 +1781,7 @@ a {
 .contact .contactDiv .contact_form textarea {
     display: block;
     width: 100%;
-    padding: 13px 30px;
+    padding: 17px 30px;
     outline: none;
     border: none;
     background: rgba(241, 241, 241, 1);
@@ -1787,10 +1796,13 @@ a {
     line-height: 24px;
     letter-spacing: 0%;
     text-align: left;
+    font-family: 'Montserrat';
 }
 
 .contact .contactDiv .contact_form textarea {
     margin-bottom: 30px;
+    font-family: 'Montserrat';
+
 }
 
 .contact .contactDiv .contact_form .contactBtn {
